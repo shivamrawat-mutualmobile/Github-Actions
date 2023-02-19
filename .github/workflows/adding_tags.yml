@@ -16,3 +16,4 @@ jobs:
         with:
           tag: "latest"
           message: "Latest release"
+          github_token: ${{ secrets.TOKEN_GITHUB }}
