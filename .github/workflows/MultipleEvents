@@ -1,0 +1,11 @@
+name: Automatic/Manual Workflow
+on:
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Name
+        run: "echo hello"
