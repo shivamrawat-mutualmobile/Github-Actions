@@ -1,0 +1,24 @@
+name: Create/update tag
+on:
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Find Pull Request
+      uses: juliangruber/find-pull-request-action@v1
+      id: find-pull-request
+      with:
+        branch: my-branch-name
+    - run: echo "Pull Request ${number} (${sha})"
+      env:
+        number: ${{ steps.find-pull-request.outputs.number }}
+        sha: ${{ steps.find-pull-request.outputs.head-sha }}
+
+
+
+
