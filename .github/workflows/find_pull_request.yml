@@ -13,7 +13,7 @@ jobs:
       uses: juliangruber/find-pull-request-action@v1
       id: find-pull-request
       with:
-        branch: bumpVersion/android-1.0.2
+        branch: bumpVersion/android-*
     - run: echo "Pull Request ${number} (${sha})"
       env:
         number: ${{ steps.find-pull-request.outputs.number }}
