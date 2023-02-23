@@ -1,5 +1,7 @@
 name: Automatic/Manual Workflow
 on:
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 jobs:
   create-tag:
